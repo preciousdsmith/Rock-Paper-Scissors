@@ -9,16 +9,15 @@ function playGame(playerMove) {
     let result = '';
     if (playerMove === 'rock') {
         result = (computerMove === 'rock') ? 'Tie.' :
-                 (computerMove === 'paper') ? 'You lose.' :
-                 'You win.';
+                (computerMove === 'paper') ? 'You lose.' :
+            'You win.';
     } else if (playerMove === 'paper') {
         result = (computerMove === 'rock') ? 'You win.' :
-                 (computerMove === 'paper') ? 'Tie.' :
-                 'You lose.';
+            (computerMove === 'paper') ? 'Tie.' :
+            'You lose.';
     } else if (playerMove === 'scissors') {
         result = (computerMove === 'rock') ? 'You lose.' :
-                 (computerMove === 'paper') ? 'You win.' :
-                 'Tie.';
+                (computerMove === 'paper') ? 'You win.' : 'Tie.';
     }
     if (result === 'You win.') score.wins++;
     else if (result === 'You lose.') score.losses++;
