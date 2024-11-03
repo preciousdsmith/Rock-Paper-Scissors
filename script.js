@@ -1,7 +1,7 @@
 //player is allowed to chooses rock, paper or scissors
-Start the game
+//Start the game
 
-ensure the scoreboard is visible on the gme
+//ensure the scoreboard is visible on the gme
 let score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
@@ -55,6 +55,8 @@ function resetScore() {
     localStorage.removeItem('score');
     updateScoreElement();
 }
+
+//code allows the player to play pressing the keys 'r', 'p', or 's'
 document.body.addEventListener('keydown', (event) => {
     if (event.key === 'r') playGame('rock');
     else if (event.key === 'p') playGame('paper');
